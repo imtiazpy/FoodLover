@@ -1,5 +1,6 @@
 const foodContainer = document.getElementById('food-container');
 const cartItems = document.getElementById('cart-items');
+const cartCount = document.getElementById('cart-count');
 const error = document.getElementById('error');
 const loading = document.getElementById('loading');
 
@@ -130,10 +131,20 @@ const addToCart = () => {
     })
 }
 
+const updateCartCount = () => {
+    const cart = getFromStorage();
+    const size = cart.length;
+    cartCount.innerText = size;
+}
+
 const cartBtnHandler = (strMeal, strMealThumb) => {
     setLocalStorage(strMeal, strMealThumb);
     addToCart()
+    updateCartCount()
 }
+
+
+
 
 
 
