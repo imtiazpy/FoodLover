@@ -211,6 +211,7 @@ addToCart()
 document.getElementById('checkout-btn').addEventListener('click', () => {
     localStorage.removeItem('cart');
     cartItems.textContent = '';
+    cartCount.textContent = '';
 })
 
 
