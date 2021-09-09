@@ -203,9 +203,9 @@ categoryList.addEventListener('click', (e) => {
 })
 
 
-// showing previously added cart items 
+// showing previously added cart items and cartSize
 addToCart()
-
+updateCartCount()
 
 // clearing cart 
 document.getElementById('checkout-btn').addEventListener('click', () => {
